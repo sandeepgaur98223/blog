@@ -11,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'blog';
+  data="New data is displaying";
+  getValue(){
+    return "Value from the function is now displaying"
+  }
 }
