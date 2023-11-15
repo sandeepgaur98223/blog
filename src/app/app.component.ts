@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { UserListComponent } from "./user-list/user-list.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    imports: [CommonModule, RouterOutlet, UserListComponent]
 })
 export class AppComponent {
   title = 'blog';
-  data="New data is displaying";
+  data="data from property";
   getValue(){
-    return "Value from the function is now displaying"
+    return "data from function"
   }
 }
