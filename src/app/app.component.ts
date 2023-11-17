@@ -23,4 +23,12 @@ export class AppComponent {
   getName(name:any,degree:any){
     alert("Name function is called by name: "+name+ " and degree: "+degree)
   }
+
+  getData(val:any){
+    console.warn('Input says: '+val)
+  }
+
+  getAnswer(value:any){
+    alert("Event called: "+value)
+  }
 }

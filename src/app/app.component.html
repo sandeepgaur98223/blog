@@ -9,6 +9,23 @@
 <app-student-list></app-student-list>
 <app-country-list></app-country-list>
 <button (click)="getName('sandeep','btech')">Call Name function</button>
+<br>
+<br>
+<button (click)="getData('using button')">Warning console function</button>
+<br>
+<br>
+<input #box (keyup)="getData(box.value)"    placeholder="testing keyup" >
+<input #box1 (keydown)="getData(box1.value)"    placeholder="testing keydown" >
+<input #box2 (blur)="getData(box2.value)"    placeholder="testing blur" >
+<input #box3 (input)="getData(box3.value)"    placeholder="testing input" >
+
+<h1 (mouseover)="getAnswer('mouseover')" style="background-color: bisque;">Test mouseover</h1>
+<h1 (mouseleave)="getAnswer('mouseleave')" style="background-color: greenyellow;">Test mouseleave</h1>
+
+
+
+
+
 
 
 
