@@ -74,3 +74,20 @@
 <ng-template [ngIf]="color==='blue'">
     <h1>This is the condition when color is blue</h1>
 </ng-template>
+
+<p>------------------------------------------</p>
+<p>Switch:</p>
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'">This is red color switch statement</h1>
+    <h1 *ngSwitchCase="'green'">This is green color switch statement</h1>
+    <h1 *ngSwitchCase="'blue'">This is blue color switch statement</h1>
+    <h1 *ngSwitchDefault>This is default color when unknown color is set</h1>
+</div>
+
+<p>------------------------------------------</p>
+<p>For Loop:</p>
+
+<h3 *ngFor="let item of users">{{item}}</h3>
+
+<h3 *ngFor="let item of detailedUsers">{{item.name}}--{{item.phone}}--{{item.email}}</h3>

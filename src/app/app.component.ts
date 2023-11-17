@@ -22,7 +22,20 @@ export class AppComponent {
   disable=false;
   name='peter';
   show=true;
-  color="blue"
+  color="black";
+  users=['Ana','Hana','Peter','Bob','Michael'];
+  detailedUsers=[
+    {name:'Ana', phone: 123,email:'a@a.com'}
+    ,
+    {name:'Hana',phone: 456, email:'hana@a.com'}
+    ,
+    {name:'Peter',phone: 789,email:'peter@a.com'}
+    
+  ];
+
+
+
+  
   getValue(){
     return "data from function"
   }
