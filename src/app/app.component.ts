@@ -16,6 +16,13 @@ import { CountryListComponent } from './country-list/country-list.component';
 export class AppComponent {
   title = 'blog';
   data="data from property";
+  getPrintVar="";
+  getPrintVarButton="";
+  counter=0;
+  disable=false;
+  name='peter';
+  show=true;
+  color="blue"
   getValue(){
     return "data from function"
   }
@@ -29,6 +36,29 @@ export class AppComponent {
   }
 
   getAnswer(value:any){
-    alert("Event called: "+value)
+    console.log("Event called: "+value)
   }
+
+  getPrint(value:any,type:string)
+  {
+
+    type==='inputbox'?(this.getPrintVar=value):(this.getPrintVarButton=value)
+  }
+
+  setCounter(type:string)
+  {
+    type==='up'?this.counter++:this.counter--;
+    // if (type==='up') {
+    //   this.counter++;
+      
+    // } else if(type==='down'){
+    //   this.counter--;
+    // }
+  }
+
+  ifElseSwitch()
+  {
+    this.show=!this.show;
+  }
+
 }
