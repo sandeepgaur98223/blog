@@ -1,3 +1,12 @@
+<p>Header</p>
+<app-header></app-header>
+
+
+
+
+
+
+<p>------------------------------------------</p>
 <h1 style="color: brown;"  class="heading">Hello, {{title}}</h1>
 <style>
     .heading{
@@ -110,3 +119,41 @@
 
 <h1 [style.color]="color2" [style.background-color]="bgcolor2">This text will change the color</h1>
 <button (click)="changeColor()">Change color</button>
+
+<p>------------------------------------------</p>
+<p>Toggle Element</p>
+<h1 [hidden]="hideElementVar">Header Element</h1>
+<button (click)="hideElement()">{{hideElementButton}} the Header</button>
+
+<p>------------------------------------------</p>
+<p>Using Bootstrap</p>
+<ngb-alert [dismissible]="false">
+	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</ngb-alert>
+
+<p>------------------------------------------</p>
+<p>Material UI</p>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button color="primary">Primary</button>
+      <button mat-raised-button color="accent">Accent</button>
+      <button mat-raised-button color="warn">Warn</button>
+      <button mat-raised-button disabled>Disabled</button>
+      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <br>
+
+  <div class="demo-section">
+    Button with a badge on the left
+    <button mat-raised-button color="primary"
+        matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+      Action
+    </button>
+  </div>
+ 
+<p>------------------------------------------</p>
+<p>To do list</p>

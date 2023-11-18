@@ -5,13 +5,23 @@ import { UserListComponent } from "./user-list/user-list.component";
 import { UserList2Component } from "./user-list2/user-list2.component";
 import { StudentListComponent } from './student-list/student-list.component';
 import { CountryListComponent } from './country-list/country-list.component';
+import { HeaderComponent } from "./header/header.component";
+import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button'
+import {MatBadgeModule} from '@angular/material/badge'
+
+
+
+
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component,StudentListComponent,CountryListComponent]
+    imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component, StudentListComponent
+      , CountryListComponent, HeaderComponent,NgbAlert,MatSlideToggleModule,MatButtonModule,MatBadgeModule]
 })
 export class AppComponent {
   title = 'blog';
@@ -25,6 +35,8 @@ export class AppComponent {
   color="black";
   color2="skyblue";
   bgcolor2="red";
+  hideElementVar=false;
+  hideElementButton='Hide';
 
   users=['Ana','Hana','Peter','Bob','Michael'];
   detailedUsers=[
@@ -90,4 +102,10 @@ export class AppComponent {
     this.color2==='skyblue'?this.color2='red':this.color2='skyblue';
     this.bgcolor2==='red'?this.bgcolor2='skyblue':this.bgcolor2='red';
   }
+
+  hideElement(){
+    this.hideElementButton==='Hide'?this.hideElementButton='Show':this.hideElementButton='Hide';
+    this.hideElementVar=!this.hideElementVar;
+  }
+
 }
