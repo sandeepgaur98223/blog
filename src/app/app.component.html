@@ -91,3 +91,22 @@
 <h3 *ngFor="let item of users">{{item}}</h3>
 
 <h3 *ngFor="let item of detailedUsers">{{item.name}}--{{item.phone}}--{{item.email}}</h3>
+
+
+<p>------------------------------------------</p>
+<p>Nest Loop:</p>
+
+<ul *ngFor="let item of detailedUsers2">
+    <li>Name: {{item.name}}</li>
+    <li>Phone: {{item.phone}}</li>
+    <li>Social Accounts:</li>
+    <ul *ngFor="let item1 of item.socialAccounts">
+        <li>{{item1}}</li>
+    </ul>
+</ul>
+
+<p>------------------------------------------</p>
+<p>Style Binding (Dynamic Styling)</p>
+
+<h1 [style.color]="color2" [style.background-color]="bgcolor2">This text will change the color</h1>
+<button (click)="changeColor()">Change color</button>

@@ -23,6 +23,9 @@ export class AppComponent {
   name='peter';
   show=true;
   color="black";
+  color2="skyblue";
+  bgcolor2="red";
+
   users=['Ana','Hana','Peter','Bob','Michael'];
   detailedUsers=[
     {name:'Ana', phone: 123,email:'a@a.com'}
@@ -31,6 +34,15 @@ export class AppComponent {
     ,
     {name:'Peter',phone: 789,email:'peter@a.com'}
     
+  ];
+
+  detailedUsers2=[
+    {name:'Ana', phone: 123,socialAccounts:['facebook','twitter','instagram']}
+    ,
+    {name:'Hana',phone: 456,socialAccounts:['reddit','quora','instagram']}
+    ,
+    {name:'Peter',phone: 789,socialAccounts:['facebook','reddit','quora']}
+
   ];
 
 
@@ -74,4 +86,8 @@ export class AppComponent {
     this.show=!this.show;
   }
 
+  changeColor(){
+    this.color2==='skyblue'?this.color2='red':this.color2='skyblue';
+    this.bgcolor2==='red'?this.bgcolor2='skyblue':this.bgcolor2='red';
+  }
 }
