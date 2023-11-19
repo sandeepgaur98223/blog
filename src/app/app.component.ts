@@ -10,6 +10,7 @@ import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button'
 import {MatBadgeModule} from '@angular/material/badge'
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 
 
@@ -21,7 +22,8 @@ import {MatBadgeModule} from '@angular/material/badge'
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component, StudentListComponent
-      , CountryListComponent, HeaderComponent,NgbAlert,MatSlideToggleModule,MatButtonModule,MatBadgeModule]
+      , CountryListComponent, HeaderComponent,NgbAlert,MatSlideToggleModule,MatButtonModule,MatBadgeModule
+    ,ToDoListComponent]
 })
 export class AppComponent {
   title = 'blog';

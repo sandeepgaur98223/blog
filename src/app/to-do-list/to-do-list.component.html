@@ -1,0 +1,8 @@
+<p>to-do-list works!</p>
+<input #box6 type="text" (keyup.enter)="insertItem(box6.value)"  [(ngModel)]="todovalue" placeholder="enter a to do task" />
+<button (click)="insertItem(box6.value)">Insert To do</button>
+
+<ul *ngFor="let item of todo">
+    <li>{{item.taskname}} <button (click)="deleteItem(item.id)">Delete</button></li>
+</ul>
+
