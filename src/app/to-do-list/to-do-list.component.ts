@@ -35,4 +35,8 @@ export class ToDoListComponent {
     this.todo=this.todo.filter((item)=>item.id!=id);
     console.log(this.todo);
   }
+
+  resetTodo(){
+    this.todo=[];
+  }
 }

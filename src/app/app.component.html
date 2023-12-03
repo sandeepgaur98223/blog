@@ -158,3 +158,20 @@
 <p>------------------------------------------</p>
 <p>To do list:</p>
 <app-to-do-list></app-to-do-list>
+
+<p>------------------------------------------</p>
+<p>Parent and Child Component</p>
+<app-child [item]="sendToChild"></app-child>
+<button (click)="updateChild()">Update Child Component</button>
+
+<p>------------------------------------------</p>
+<p>Parent and Child Component2 Reusing:</p>
+<p *ngFor="let item of sendToChild2">
+  <app-child2 [item1]="item"></app-child2>
+</p>
+
+<p>------------------------------------------</p>
+<p>Setting background image</p>
+
+
+

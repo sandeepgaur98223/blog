@@ -1,4 +1,10 @@
 .heading{
     color: red;
     background-color: lightblue;
+    background-image: "../assets/bgflower.jpg";
 }
+
+/* body{
+    background-image: "../assets/bgflower.jpg";
+} */
+

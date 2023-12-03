@@ -11,8 +11,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button'
 import {MatBadgeModule} from '@angular/material/badge'
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
-
-
+import { ChildComponent } from './child/child.component';
+import { Child2Component } from "./child2/child2.component";
 
 
 
@@ -21,9 +21,9 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component, StudentListComponent
-      , CountryListComponent, HeaderComponent,NgbAlert,MatSlideToggleModule,MatButtonModule,MatBadgeModule
-    ,ToDoListComponent]
+    imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component, StudentListComponent,
+        CountryListComponent, HeaderComponent, NgbAlert, MatSlideToggleModule, MatButtonModule, MatBadgeModule,
+        ToDoListComponent, ChildComponent, Child2Component]
 })
 export class AppComponent {
   title = 'blog';
@@ -59,9 +59,14 @@ export class AppComponent {
 
   ];
 
+  sendToChild=1000;
+  // sendToChild2=['firstLoop','secondLoop','thirdLoop']
+  sendToChild2=[{name:'Peter',phone:123}
+  ,{name:'Zac',phone:456}
+  ,{name:'Ronnie',phone:789}]
 
 
-  
+
   getValue(){
     return "data from function"
   }
@@ -109,5 +114,10 @@ export class AppComponent {
     this.hideElementButton==='Hide'?this.hideElementButton='Show':this.hideElementButton='Hide';
     this.hideElementVar=!this.hideElementVar;
   }
+
+  updateChild(){
+    this.sendToChild=Math.floor(Math.random()*10)
+  }
+
 
 }
