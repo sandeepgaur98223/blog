@@ -13,6 +13,7 @@ import {MatBadgeModule} from '@angular/material/badge'
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from "./child2/child2.component";
+import { Childc2pComponent } from './childc2p/childc2p.component';
 
 
 
@@ -23,7 +24,7 @@ import { Child2Component } from "./child2/child2.component";
     styleUrls: ['./app.component.css'],
     imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component, StudentListComponent,
         CountryListComponent, HeaderComponent, NgbAlert, MatSlideToggleModule, MatButtonModule, MatBadgeModule,
-        ToDoListComponent, ChildComponent, Child2Component]
+        ToDoListComponent, ChildComponent, Child2Component,Childc2pComponent]
 })
 export class AppComponent {
   title = 'blog';
@@ -64,7 +65,6 @@ export class AppComponent {
   sendToChild2=[{name:'Peter',phone:123}
   ,{name:'Zac',phone:456}
   ,{name:'Ronnie',phone:789}]
-
 
 
   getValue(){
@@ -118,6 +118,14 @@ export class AppComponent {
   updateChild(){
     this.sendToChild=Math.floor(Math.random()*10)
   }
+
+  sendc2p ="Sending data from Child to Parent: ";
+
+  updateData(item:string){
+    console.warn(item);
+    this.sendc2p="Sending data from Child to Parent: "+item;
+  }
+
 
 
 }
