@@ -45,6 +45,7 @@
                 }
               ],
               "outputHashing": "all"
+              ,"baseHref": "/blog/"
             },
             "development": {
               "optimization": false,
