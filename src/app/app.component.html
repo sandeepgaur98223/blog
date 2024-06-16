@@ -1,48 +1,45 @@
 <p>Header</p>
 <app-header></app-header>
 
-
-
-
-
-
 <p>------------------------------------------</p>
-<h1 style="color: brown;"  class="heading">Hello, {{title}}</h1>
+<router-outlet></router-outlet> <!-- Add this line for routing -->
+
+<h1 style="color: brown;" class="heading">Hello, {{title}}</h1>
 <style>
-    .heading{
-        color:blue;
+    .heading {
+        color: blue;
     }
 </style>
 <h2>Data is: {{data}}</h2>
 <h3>{{getValue()}}</h3>
-<h3>{{title==="blog"}}</h3>
+<h3>{{title === "blog"}}</h3>
 <!-- <h3>{{title="hello"}}</h3> -->
-<!-- <h3>{{typeof title}}</h3>  -->
+<!-- <h3>{{typeof title}}</h3> -->
 <app-user-list></app-user-list>
 <app-user-list2></app-user-list2>
 <app-student-list></app-student-list>
 <app-country-list></app-country-list>
-<button (click)="getName('sandeep','btech')">Call Name function</button>
+<button (click)="getName('sandeep', 'btech')">Call Name function</button>
 <br>
 <br>
 <button (click)="getData('using button')">Warning console function</button>
 <br>
 <br>
-<input #box (keyup)="getData(box.value)"    placeholder="testing keyup" >
-<input #box1 (keydown)="getData(box1.value)"    placeholder="testing keydown" >
-<input #box2 (blur)="getData(box2.value)"    placeholder="testing blur" >
-<input #box3 (input)="getData(box3.value)"    placeholder="testing input" >
+<input #box (keyup)="getData(box.value)" placeholder="testing keyup">
+<input #box1 (keydown)="getData(box1.value)" placeholder="testing keydown">
+<input #box2 (blur)="getData(box2.value)" placeholder="testing blur">
+<input #box3 (input)="getData(box3.value)" placeholder="testing input">
 
 <h1 (mouseover)="getAnswer('mouseover')" style="background-color: bisque;">Test mouseover</h1>
 <h1 (mouseleave)="getAnswer('mouseleave')" style="background-color: greenyellow;">Test mouseleave</h1>
 <p>------------------------------------------</p>
 <h1>Get Input Box value</h1>
-<input #box4 type="text" placeholder="enter name"  name="name" (keyup)="getPrint(box4.value,'inputbox')"/>
+<input #box4 type="text" placeholder="enter name" name="name" (keyup)="getPrint(box4.value, 'inputbox')"/>
 <h2>{{getPrintVar}}</h2>
 <p>------------------------------------------</p>
 <h1>Get Input Box value with button</h1>
-<input #box5 type="text" placeholder="enter name"  name="name1" />
-<button (click)="getPrint(box5.value,'button')">Print Below</button>
+<input #box5 type="text" placeholder="enter name" name="name1"/>
+<button (click)="getPrint(box5.value, 'button')">Print Below</button>
 <h2>{{getPrintVarButton}}</h2>
 
 <p>Counter:</p>
@@ -54,30 +51,30 @@
 <input type="text" placeholder="Interpolation" value={{name}} disabled={{disable}}>
 <br>
 <br>
-<input type="text" placeholder="Property Binding" [value]=name [disabled]=disable  />
+<input type="text" placeholder="Property Binding" [value]="name" [disabled]="disable"/>
 <p>------------------------------------------</p>
 <p>If else:</p>
 <button (click)="ifElseSwitch()">Switch</button>
-<h1 *ngIf="show==true then ifblock else elseblock"></h1>
+<h1 *ngIf="show==true; then ifblock else elseblock"></h1>
 
 <ng-template #ifblock>
     <h2>This is if condition</h2>
 </ng-template>
 
 <ng-template #elseblock>
-<h1>This is else condtion</h1>
+    <h1>This is else condition</h1>
 </ng-template>
 
-<input placeholder="Will show for only If" [hidden]="!show" />
+<input placeholder="Will show for only If" [hidden]="!show"/>
 
 <p>------------------------------------------</p>
 <p>Multiple condition If else:</p>
 <ng-template [ngIf]="color==='red'">
-<h1>This is the condition when color is red</h1>
+    <h1>This is the condition when color is red</h1>
 </ng-template>
 
 <ng-template [ngIf]="color==='green'">
-<h1>This is the condition when color is green</h1>
+    <h1>This is the condition when color is green</h1>
 </ng-template>
 
 <ng-template [ngIf]="color==='blue'">
@@ -100,7 +97,6 @@
 <h3 *ngFor="let item of users">{{item}}</h3>
 
 <h3 *ngFor="let item of detailedUsers">{{item.name}}--{{item.phone}}--{{item.email}}</h3>
-
 
 <p>------------------------------------------</p>
 <p>Nest Loop:</p>
@@ -128,7 +124,7 @@
 <p>------------------------------------------</p>
 <p>Using Bootstrap</p>
 <ngb-alert [dismissible]="false">
-	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
 </ngb-alert>
 
 <p>------------------------------------------</p>
@@ -137,24 +133,24 @@
 <section>
     <div class="example-label">Raised</div>
     <div class="example-button-row">
-      <button mat-raised-button>Basic</button>
-      <button mat-raised-button color="primary">Primary</button>
-      <button mat-raised-button color="accent">Accent</button>
-      <button mat-raised-button color="warn">Warn</button>
-      <button mat-raised-button disabled>Disabled</button>
-      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
     </div>
-  </section>
-  <br>
+</section>
+<br>
 
-  <div class="demo-section">
+<div class="demo-section">
     Button with a badge on the left
     <button mat-raised-button color="primary"
-        matBadge="8" matBadgePosition="before" matBadgeColor="accent">
-      Action
+            matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+        Action
     </button>
-  </div>
- 
+</div>
+
 <p>------------------------------------------</p>
 <p>To do list:</p>
 <app-to-do-list></app-to-do-list>
@@ -167,12 +163,11 @@
 <p>------------------------------------------</p>
 <p>Parent and Child Component2 Reusing:</p>
 <p *ngFor="let item of sendToChild2">
-  <app-child2 [item1]="item"></app-child2>
+    <app-child2 [item1]="item"></app-child2>
 </p>
 
 <p>------------------------------------------</p>
 <p>Setting background image</p>
-
 
 <p>------------------------------------------</p>
 <p>Child to Parent component</p>
@@ -180,14 +175,13 @@
 <app-childc2p (updateDataEvent)="updateData($event)"></app-childc2p>
 <p>{{sendc2p}}</p>
 
-
 <p>------------------------------------------</p>
 <p>Angular all</p>
 
 <h1>{{ title1 }}</h1>
 <div *ngIf="isVisible">This div is visible</div>
 <ul>
-  <li *ngFor="let item of items">{{ item }}</li>
+    <li *ngFor="let item of items">{{ item }}</li>
 </ul>
 <div [ngClass]="{ 'highlight': isHighlighted }">Styled Div</div>
 <div [ngStyle]="{ 'color': textColor }">Styled Text</div>
