@@ -14,6 +14,7 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from "./child2/child2.component";
 import { Childc2pComponent } from './childc2p/childc2p.component';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 
 
@@ -24,7 +25,7 @@ import { Childc2pComponent } from './childc2p/childc2p.component';
     styleUrls: ['./app.component.css'],
     imports: [CommonModule, RouterOutlet, UserListComponent, UserList2Component, StudentListComponent,
         CountryListComponent, HeaderComponent, NgbAlert, MatSlideToggleModule, MatButtonModule, MatBadgeModule,
-        ToDoListComponent, ChildComponent, Child2Component,Childc2pComponent]
+        ToDoListComponent, ChildComponent, Child2Component,Childc2pComponent,FormsModule]
 })
 export class AppComponent {
   title = 'blog';
@@ -40,6 +41,19 @@ export class AppComponent {
   bgcolor2="red";
   hideElementVar=false;
   hideElementButton='Hide';
+
+  title1 = 'Angular Templates';
+  isVisible = true;
+  items = ['Item 1', 'Item 2', 'Item 3'];
+  isHighlighted = true;
+  textColor = 'blue';
+  name1 = 'Angular';
+  birthday = new Date(1990, 1, 1);
+  amount = 12345.67;
+
+  logValue(value: string) {
+    console.log(value);
+  }
 
   users=['Ana','Hana','Peter','Bob','Michael'];
   detailedUsers=[

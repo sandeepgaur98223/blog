@@ -179,3 +179,22 @@
 
 <app-childc2p (updateDataEvent)="updateData($event)"></app-childc2p>
 <p>{{sendc2p}}</p>
+
+
+<p>------------------------------------------</p>
+<p>Angular all</p>
+
+<h1>{{ title1 }}</h1>
+<div *ngIf="isVisible">This div is visible</div>
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+<div [ngClass]="{ 'highlight': isHighlighted }">Styled Div</div>
+<div [ngStyle]="{ 'color': textColor }">Styled Text</div>
+<input #inputRef type="text">
+<button (click)="logValue(inputRef.value)">Log Value</button>
+<input [(ngModel)]="name1">
+<p>{{ name1 }}</p>
+<p>{{ birthday | date:'longDate' }}</p>
+<p>{{ name | uppercase }}</p>
+<p>{{ amount | currency:'USD':true }}</p>
